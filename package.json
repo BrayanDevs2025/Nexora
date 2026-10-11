@@ -1,0 +1,19 @@
+{
+  "name": "mi-centro-de-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mi Centro de Control: sistema personal y empresarial con sincronización entre dispositivos",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && npx --yes serve public -l 3000",
+    "local": "CC_ALLOW_NO_CONFIG=1 npm run build && npx --yes serve public -l 3000",
+    "test": "node --test tests/logic.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
